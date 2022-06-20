@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Exchange-rate-Calculator</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+</head>
+
+<body>
+    <div>
+        <select id="sourceCurrency">
+            <option value="KRW" selected>USD</option>
+            <option value="USD">KRW</option>
+            <option value="AUD">AUD</option>
+            <option value="EUR">EUR</option>
+            <option value="HKD">HKD</option>
+            <option value="THB">THB</option>
+            <option value="JPY">JPY</option>
+        </select>
+        <input name="sourceMoney" type="text" />
+    </div>
+
+    <div>▼</div>
+
+    <div>
+        <select id="targetCurrency">
+            <option value="USD">USD</option>
+            <option value="KRW" selected>KRW</option>
+            <option value="AUD">AUD</option>
+            <option value="EUR">EUR</option>
+            <option value="HKD">HKD</option>
+            <option value="THB">THB</option>
+            <option value="JPY">JPY</option>
+        </select>
+        <input name="targetMoney" type="text" />
+    </div>
+</body>
+<script>
+    //=================================================선언부===========================================================
+    const sourceCurrency = document.getElementById('sourceCurrency');
+    const targetCurrency = document.getElementById('targetCurrency');
+    const sourceMoney = document.querySelector("input[name=sourceMoney]");
+    const targetMoney = document.querySelector("input[name=targetMoney]");
+
+    //=================================================이벤트 영역========================================================
+
+    // 환율계산기
+    // InputMoney.on("keyup", function () {
+    //     var country = exchange_Country.val() + exchange_Result_Country.val();
+    //     var money = InputMoney.val();
+    //     console.log(country);
+    //     $.ajax({
+    //         url: 'https://earthquake.kr:23490/query/' + country,
+    //         type: 'get',
+    //         crossOrigin: true,
+    //         header: {
+    //             "Content-Type": "application/json",	//Content-Type 설정
+    //             "X-HTTP-Method-Override": "get"
+    //         },
+    //         dataType: 'JSON',
+    //         success: function (result) {
+    //             console.log(typeof (result));
+    //             var data = result;
+    //             var strCountry = "data." + country + "[0]";
+    //             var exchangeRate = eval(strCountry);
+    //             var result = Math.round(money * exchangeRate * 100) / 100.0;
+
+    //             ResultMoney.val(result);
+    //         }
+    //     });//end of Ajax
+    // }); //end of 환율계산기
+
+
+
+    // //단위 바꾸기_조회 국가
+    // exchange_Country.on("change", function () {
+    //     var currency2_val;
+
+    //     switch (exchange_Country.val()) {
+    //         case 'USD':
+    //             currency1_val = "달러";
+    //             break;
+    //         case 'AUD':
+    //             currency1_val = "호주달러";
+    //             break;
+    //         case 'EUR':
+    //             currency1_val = "유로";
+    //             break;
+    //         case 'KRW':
+    //             currency1_val = "원";
+    //             break;
+    //         case 'HKD':
+    //             currency1_val = "홍콩달러";
+    //             break;
+    //         case 'THB':
+    //             currency1_val = "바트";
+    //             break;
+    //         case 'JPY':
+    //             currency1_val = "엔";
+    //             break;
+    //     }
+    //     currency1.html(currency1_val);
+    // });
+
+
+    // //단위 바꾸기_결과 국가
+    // exchange_Result_Country.on("change", function () {
+    //     var currency2_val;
+
+    //     switch (exchange_Result_Country.val()) {
+    //         case 'USD':
+    //             currency2_val = "달러";
+    //             break;
+    //         case 'AUD':
+    //             currency2_val = "호주달러";
+    //             break;
+    //         case 'EUR':
+    //             currency2_val = "유로";
+    //             break;
+    //         case 'KRW':
+    //             currency2_val = "원";
+    //             break;
+    //         case 'HKD':
+    //             currency2_val = "홍콩달러";
+    //             break;
+    //         case 'THB':
+    //             currency2_val = "바트";
+    //             break;
+    //         case 'JPY':
+    //             currency2_val = "엔";
+    //             break;
+    //     }
+    //     currency2.html(currency2_val);
+    // });
+</script>
+
+</html>
